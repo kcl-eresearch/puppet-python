@@ -214,7 +214,7 @@ class python::install {
         }
       }
 
-      if String($python::version) =~ /^python3/ {
+      if String($python) =~ /^python3/ {
         $pip_category = undef
         $pip_package  = "${python}-pip"
         $pip_provider = $python.regsubst(/^.*python3\.?/,'pip3.').regsubst(/\.$/,'')
